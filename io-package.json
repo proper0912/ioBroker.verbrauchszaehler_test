@@ -66,11 +66,11 @@
         "js-controller": ">=2.0.0"
       }
     ],
-    "installedFrom": "Proper0912/ioBroker.verbrauchszaehler#c23fb10a10f30049900691f4d734546f0a26c7a1"
+    "installedFrom": "Proper0912/ioBroker.verbrauchszaehler#98d9a0ed3e6ccea54c45d90cfbf1a76003456a6d"
   },
   "native": {
     "dpoint": "",
-    "MySelect": "oil"
+    "MySelect": ""
   },
   "objects": [],
   "instanceObjects": []
