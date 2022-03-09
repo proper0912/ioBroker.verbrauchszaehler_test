@@ -19,7 +19,7 @@ class Verbrauchszaehler extends utils.Adapter {
     constructor(options) {
         super({
             ...options,
-            name: 'template',
+            name: 'verbrauchszaehler',
         });
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
@@ -158,7 +158,7 @@ class Verbrauchszaehler extends utils.Adapter {
 
 }
 
-if (require.main !== module) {
+if (module.parent) {
     // Export the constructor in compact mode
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]

@@ -16,30 +16,30 @@
                 "zh-cn": "首次出版"
             }
         },
-        "title": "Verbrauchszaehler",
+        "title": "Verbrauchszähler",
         "titleLang": {
-            "en": "Verbrauchszaehler",
-            "de": "Verbrauchszaehler",
-            "ru": "Verbrauchszaehler",
-            "pt": "Verbrauchszaehler",
-            "nl": "Verbrauchszaehler",
-            "fr": "Verbrauchszaehler",
-            "it": "Verbrauchszaehler",
-            "es": "Verbrauchszaehler",
-            "pl": "Verbrauchszaehler",
-            "zh-cn": "Verbrauchszaehler"
+            "en": "Verbrauchszähler",
+            "de": "Verbrauchszähler",
+            "ru": "Verbrauchszähler",
+            "pt": "Verbrauchszähler",
+            "nl": "Verbrauchszähler",
+            "fr": "Verbrauchszähler",
+            "it": "Verbrauchszähler",
+            "es": "Verbrauchszähler",
+            "pl": "Verbrauchszähler",
+            "zh-cn": "Verbrauchszähler"
         },
         "desc": {
-            "en": "Verbrauchszaehler",
-            "de": "Verbrauchszaehler",
-            "ru": "Verbrauchszaehler",
-            "pt": "Verbrauchszaehler",
-            "nl": "Verbrauchszaehler",
-            "fr": "Verbrauchszaehler",
-            "it": "Verbrauchszaehler",
-            "es": "Verbrauchszaehler",
-            "pl": "Verbrauchszaehler",
-            "zh-cn": "Verbrauchszaehler"
+            "en": "Verbrauchszähler für ÖL,Wasser",
+            "de": "Verbrauchszähler für ÖL,Wasser",
+            "ru": "Verbrauchszähler für ÖL,Wasser",
+            "pt": "Verbrauchszähler für ÖL,Wasser",
+            "nl": "Verbrauchszähler für ÖL,Wasser",
+            "fr": "Verbrauchszähler für ÖL,Wasser",
+            "it": "Verbrauchszähler für ÖL,Wasser",
+            "es": "Verbrauchszähler für ÖL,Wasser",
+            "pl": "Verbrauchszähler für ÖL,Wasser",
+            "zh-cn": "Verbrauchszähler für ÖL,Wasser"
         },
         "authors": [
             "Florian Peter <peter_florian@gmx.de>"
@@ -69,7 +69,7 @@
     },
     "native": {
         "dpoint": "",
-        "mySelect": "Öl"
+        "MySelect": "oil"
     },
     "objects": [],
     "instanceObjects": []
