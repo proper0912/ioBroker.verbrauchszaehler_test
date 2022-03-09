@@ -7,6 +7,8 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
+const adaptername = "verbrauchszaehler";
+var adapter  = utils.Adapter (adaptername);
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -38,6 +40,10 @@ class Verbrauchszaehler extends utils.Adapter {
 		
 		var date =  new Date().getFullYear();
 		var myselect = this.config.mySelect;
+		var day = boolean;
+		var week = boolean;
+		var month = boolean;
+		var year = boolean;
 		var unit;
 		
 		if ( myselect == "Öl" || myselect == "Wasser") {
@@ -46,7 +52,7 @@ class Verbrauchszaehler extends utils.Adapter {
 			unit = "kWh";
 		} else {
 			unit ="";
-		}
+		};
 		
 		if (adapter.on == true){
 		adapter.setObjectNotExists (myselect + '.' + date + '.' + 'LastDay',{
@@ -58,8 +64,9 @@ class Verbrauchszaehler extends utils.Adapter {
 				read:true,
 				write:true,
 				def: 0,
-				unit: unit},
-			native:{}
+				unit: unit
+				},
+			native:{},
 		});
 		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.LastValue',{
 			type:'state',
@@ -70,8 +77,9 @@ class Verbrauchszaehler extends utils.Adapter {
 				read:true,
 				write:true,
 				def: 0,
-				unit: unit},
-			native:{}
+				unit: unit
+				},
+			native:{},
 		});
 		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.NewValue',{
 			type:'state',
@@ -82,8 +90,9 @@ class Verbrauchszaehler extends utils.Adapter {
 				read:true,
 				write:true,
 				def: 0,
-				unit: unit},
-			native:{}
+				unit: unit
+				},
+			native:{},
 		});
 }
 /*
