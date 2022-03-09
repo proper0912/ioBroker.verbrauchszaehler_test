@@ -69,25 +69,53 @@
 
         <div class="row">
             <div class="col s12 m4 l2">
-                <img src="template.png" class="logo">
+                <img src="verbrauchszaehler.png" class="logo">
             </div>
         </div>
 
         <!-- Put your content here -->
-
+        <div class="row">
+            <div class="col s12 m4 l2">
+                <label for="title" class="translate">Verbrauchszähler</label>
+            </div>
+        </div>
         <!-- For example columns with settings: -->
         <div class="row">
             <div class="col s6 input-field">
-                <input type="checkbox" class="value" id="option1" />
-                <label for="option1" class="translate">option1</label>
+                <input type="checkbox" class="value" id="day" />
+                <label for="day" class="translate">Tage</label>
             </div>
-
             <div class="col s6 input-field">
-                <input type="text" class="value" id="option2" />
-                <label for="option2" class="translate">option2</label>
+                <input type="text" class="value" id="dpoint" />
+                <label for="dpoint" class="translate">Datenpunkt</label>
             </div>
         </div>
-
+		<div class="row">
+            <div class="col s6 input-field">
+                <input type="checkbox" class="value" id="week" />
+                <label for="week" class="translate">Woche</label>
+            </div>
+                <div class="input-field col s12 m4">
+                    <select class="value" id="mySelect">
+                        <option value="oil" class="translate">Öl</option>
+                        <option value="water" class="translate">Wasser</option>
+                    </select>
+                    <label for="mySelect" class="translate">Wähle das Medium aus</label>
+                    <!-- Important: label must come directly after select. Label is important. -->
+                </div>
+		</div>
+		<div class="row">
+            <div class="col s6 input-field">
+                <input type="checkbox" class="value" id="month" />
+                <label for="month" class="translate">Monate</label>
+            </div>
+		</div>
+		<div class="row">
+            <div class="col s6 input-field">
+                <input type="checkbox" class="value" id="year" />
+                <label for="year" class="translate">Jahr</label>
+            </div>
+		</div>
     </div>
 
 </body>

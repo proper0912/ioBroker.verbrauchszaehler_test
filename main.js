@@ -11,7 +11,7 @@ const utils = require('@iobroker/adapter-core');
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
-class Template extends utils.Adapter {
+class Verbrauchszaehler extends utils.Adapter {
 
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
@@ -36,14 +36,15 @@ class Template extends utils.Adapter {
 
         // The adapters config (in the instance object everything under the attribute "native") is accessible via
         // this.config:
-        this.log.info('config option1: ' + this.config.option1);
-        this.log.info('config option2: ' + this.config.option2);
+        this.log.info('config dpoint: ' + this.config.dpoint);
+        this.log.info('config mySelect: ' + this.config.mySelect);
 
         /*
         For every state in the system there has to be also an object of type state
         Here a simple template for a boolean variable named "testVariable"
         Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
         */
+/*
         await this.setObjectNotExistsAsync('testVariable', {
             type: 'state',
             common: {
@@ -55,6 +56,7 @@ class Template extends utils.Adapter {
             },
             native: {},
         });
+		
 
         // In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
         this.subscribeStates('testVariable');
@@ -62,13 +64,13 @@ class Template extends utils.Adapter {
         // this.subscribeStates('lights.*');
         // Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
         // this.subscribeStates('*');
-
+*/
         /*
             setState examples
             you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
         */
         // the variable testVariable is set to true as command (ack=false)
-        await this.setStateAsync('testVariable', true);
+/*        await this.setStateAsync('testVariable', true);
 
         // same thing, but the value is flagged "ack"
         // ack should be always set to true if the value is received from or acknowledged from the target system
@@ -82,8 +84,9 @@ class Template extends utils.Adapter {
         this.log.info('check user admin pw iobroker: ' + result);
 
         result = await this.checkGroupAsync('admin', 'admin');
-        this.log.info('check group user admin group admin: ' + result);
-    }
+       this.log.info('check group user admin group admin: ' + result);
+ */ 
+	}
 
     /**
      * Is called when adapter shuts down - callback has to be called under any circumstances!
@@ -160,8 +163,8 @@ if (require.main !== module) {
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
-    module.exports = (options) => new Template(options);
+    module.exports = (options) => new Verbrauchszaehler(options);
 } else {
     // otherwise start the instance directly
-    new Template();
+    new Verbrauchszaehler();
 }
