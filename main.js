@@ -40,10 +40,10 @@ class Verbrauchszaehler extends utils.Adapter {
 		
 		var date =  new Date().getFullYear();
 		var myselect = this.config.mySelect;
-		var day = boolean;
-		var week = boolean;
-		var month = boolean;
-		var year = boolean;
+		//var day = boolean;
+		//var week = boolean;
+		//var month = boolean;
+		//var year = boolean;
 		var unit;
 		
 		if ( myselect == "Öl" || myselect == "Wasser") {
