@@ -12,21 +12,21 @@
 ## Verbrauchs Zähler for ioBroker
 
 ### **WORK IN PROGRESS**
-## 0.0.2 (2022-03 2022-04)
+#### 0.0.2 (2022-03 2022-04)
 * (Proper0912) Grundgerüst für die Daten erfassung
 * (Proper0912) index.html Aufbau für ein Datenpunkt
 * (Proper0912) Strukt der Datenpunkte festlegen
 * (Proper0912) Bild aktuliesieren
 * (Proper0912) readme Text anpassen 
 
-#### Changelog
+## Changelog
 
 <!--
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
 
-##  0.0.1   (2022-03-09)
+###  0.0.1   (2022-03-09)
 * (Proper0912) Initial Projekt
 	
 
