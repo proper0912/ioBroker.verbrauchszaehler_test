@@ -1,76 +1,77 @@
 {
-    "common": {
-        "name": "verbrauchszaehler",
-        "version": "0.0.1",
-        "news": {
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "title": "Verbrauchszähler",
-        "titleLang": {
-            "en": "Verbrauchszähler",
-            "de": "Verbrauchszähler",
-            "ru": "Verbrauchszähler",
-            "pt": "Verbrauchszähler",
-            "nl": "Verbrauchszähler",
-            "fr": "Verbrauchszähler",
-            "it": "Verbrauchszähler",
-            "es": "Verbrauchszähler",
-            "pl": "Verbrauchszähler",
-            "zh-cn": "Verbrauchszähler"
-        },
-        "desc": {
-            "en": "Verbrauchszähler für ÖL,Wasser",
-            "de": "Verbrauchszähler für ÖL,Wasser",
-            "ru": "Verbrauchszähler für ÖL,Wasser",
-            "pt": "Verbrauchszähler für ÖL,Wasser",
-            "nl": "Verbrauchszähler für ÖL,Wasser",
-            "fr": "Verbrauchszähler für ÖL,Wasser",
-            "it": "Verbrauchszähler für ÖL,Wasser",
-            "es": "Verbrauchszähler für ÖL,Wasser",
-            "pl": "Verbrauchszähler für ÖL,Wasser",
-            "zh-cn": "Verbrauchszähler für ÖL,Wasser"
-        },
-        "authors": [
-            "Florian Peter <peter_florian@gmx.de>"
-        ],
-        "keywords": [
-            "ioBroker",
-            "verbrauchszaehler",
-            "Smart Home",
-            "home automation"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "verbrauchszaehler.png",
-        "enabled": false,
-        "extIcon": "https://raw.githubusercontent.com/Proper0912/ioBroker.verbrauchszaehler/main/admin/verbrauchszaehler.png",
-        "readme": "https://github.com/Proper0912/ioBroker.verbrauchszaehler/blob/main/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "general",
-        "compact": true,
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ]
+  "common": {
+    "name": "verbrauchszaehler",
+    "version": "0.0.1",
+    "news": {
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
     },
-    "native": {
-        "dpoint": "",
-        "MySelect": "oil"
+    "title": "Verbrauchszähler",
+    "titleLang": {
+      "en": "Verbrauchszähler",
+      "de": "Verbrauchszähler",
+      "ru": "Verbrauchszähler",
+      "pt": "Verbrauchszähler",
+      "nl": "Verbrauchszähler",
+      "fr": "Verbrauchszähler",
+      "it": "Verbrauchszähler",
+      "es": "Verbrauchszähler",
+      "pl": "Verbrauchszähler",
+      "zh-cn": "Verbrauchszähler"
     },
-    "objects": [],
-    "instanceObjects": []
+    "desc": {
+      "en": "Verbrauchszähler für ÖL,Wasser",
+      "de": "Verbrauchszähler für ÖL,Wasser",
+      "ru": "Verbrauchszähler für ÖL,Wasser",
+      "pt": "Verbrauchszähler für ÖL,Wasser",
+      "nl": "Verbrauchszähler für ÖL,Wasser",
+      "fr": "Verbrauchszähler für ÖL,Wasser",
+      "it": "Verbrauchszähler für ÖL,Wasser",
+      "es": "Verbrauchszähler für ÖL,Wasser",
+      "pl": "Verbrauchszähler für ÖL,Wasser",
+      "zh-cn": "Verbrauchszähler für ÖL,Wasser"
+    },
+    "authors": [
+      "Florian Peter <peter_florian@gmx.de>"
+    ],
+    "keywords": [
+      "ioBroker",
+      "verbrauchszaehler",
+      "Smart Home",
+      "home automation"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "verbrauchszaehler.png",
+    "enabled": false,
+    "extIcon": "https://raw.githubusercontent.com/Proper0912/ioBroker.verbrauchszaehler/main/admin/verbrauchszaehler.png",
+    "readme": "https://github.com/Proper0912/ioBroker.verbrauchszaehler/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "general",
+    "compact": true,
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
+    ],
+    "installedFrom": "Proper0912/ioBroker.verbrauchszaehler#b51fafe69582d9541d415a1bd1a7d744a3d88a2c"
+  },
+  "native": {
+    "dpoint": "",
+    "MySelect": "oil"
+  },
+  "objects": [],
+  "instanceObjects": []
 }

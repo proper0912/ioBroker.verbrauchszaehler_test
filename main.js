@@ -38,8 +38,9 @@ class Verbrauchszaehler extends utils.Adapter {
 		
 		var date =  new Date().getFullYear();
 		var myselect = this.config.mySelect;
+		var unit;
 		
-		if ( myselect == "Öl" || myselect == "Water") {
+		if ( myselect == "Öl" || myselect == "Wasser") {
 			unit ="L";
 		} else if ( myselect == "Strom") {
 			unit = "kWh";
