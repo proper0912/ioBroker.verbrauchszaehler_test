@@ -9,9 +9,13 @@
 [![Translation status](https://weblate.iobroker.net/widgets/adapters/-/homekit-controller/svg-badge.svg)](https://weblate.iobroker.net/engage/adapters/?utm_source=widget)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.verbrauchszaehler.svg)](https://www.npmjs.com/package/iobroker.verbrauchszaehler)
 -->
-## Verbrauchs Zähler for ioBroker
+## Verbrauchsähler für ioBroker
 
-### **WORK IN PROGRESS**
+Hier kannst dein aktuellen Tages Verbrauch sehen.
+Dein Gesamt Verbrauch vom Start des Adapters.
+
+
+### **Work in Progress**
 #### 0.0.2 (2022-03 2022-04)
 * (Proper0912) Grundgerüst für die Daten erfassung
 * (Proper0912) index.html Aufbau für ein Datenpunkt

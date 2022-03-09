@@ -33,17 +33,58 @@ class Verbrauchszaehler extends utils.Adapter {
      */
     async onReady() {
         // Initialize your adapter here
-
-        // The adapters config (in the instance object everything under the attribute "native") is accessible via
-        // this.config:
         this.log.info('config dpoint: ' + this.config.dpoint);
         this.log.info('config mySelect: ' + this.config.mySelect);
-
-        /*
-        For every state in the system there has to be also an object of type state
-        Here a simple template for a boolean variable named "testVariable"
-        Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
-        */
+		
+		var date =  new Date().getFullYear();
+		var myselect = this.config.mySelect;
+		
+		if ( myselect == "Öl" || myselect == "Water") {
+			unit ="L";
+		} else if ( myselect == "Strom") {
+			unit = "kWh";
+		} else {
+			unit ="";
+		}
+		
+		if (adapter.on == true){
+		adapter.setObjectNotExists (myselect + '.' + date + '.' + 'LastDay',{
+			type:'state',
+			common:{
+				name:'Day' ,
+				type:'number',
+				role:'value',
+				read:true,
+				write:true,
+				def: 0,
+				unit: unit},
+			native:{}
+		});
+		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.LastValue',{
+			type:'state',
+			common:{
+				name:'LastValue' ,
+				type:'number',
+				role:'value',
+				read:true,
+				write:true,
+				def: 0,
+				unit: unit},
+			native:{}
+		});
+		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.NewValue',{
+			type:'state',
+			common:{
+				name:'NewValue' ,
+				type:'number',
+				role:'value',
+				read:true,
+				write:true,
+				def: 0,
+				unit: unit},
+			native:{}
+		});
+}
 /*
         await this.setObjectNotExistsAsync('testVariable', {
             type: 'state',
@@ -94,12 +135,7 @@ class Verbrauchszaehler extends utils.Adapter {
      */
     onUnload(callback) {
         try {
-            // Here you must clear all timeouts or intervals that may still be active
-            // clearTimeout(timeout1);
-            // clearTimeout(timeout2);
-            // ...
-            // clearInterval(interval1);
-
+			this.log.info("cleaned everything up...");
             callback();
         } catch (e) {
             callback();
