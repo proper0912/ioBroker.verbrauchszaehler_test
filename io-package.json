@@ -1,0 +1,96 @@
+{
+    "common": {
+        "name": "verbrauchszaehler",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Verbrauchszaehler",
+        "titleLang": {
+            "en": "Verbrauchszaehler",
+            "de": "Verbrauchszaehler",
+            "ru": "Verbrauchszaehler",
+            "pt": "Verbrauchszaehler",
+            "nl": "Verbrauchszaehler",
+            "fr": "Verbrauchszaehler",
+            "it": "Verbrauchszaehler",
+            "es": "Verbrauchszaehler",
+            "pl": "Verbrauchszaehler",
+            "zh-cn": "Verbrauchszaehler"
+        },
+        "desc": {
+            "en": "Verbrauchszaehler",
+            "de": "Verbrauchszaehler",
+            "ru": "Verbrauchszaehler",
+            "pt": "Verbrauchszaehler",
+            "nl": "Verbrauchszaehler",
+            "fr": "Verbrauchszaehler",
+            "it": "Verbrauchszaehler",
+            "es": "Verbrauchszaehler",
+            "pl": "Verbrauchszaehler",
+            "zh-cn": "Verbrauchszaehler"
+        },
+        "authors": [
+            "Florian Peter <peter_florian@gmx.de>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "verbrauchszaehler",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "template.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Proper0912/ioBroker.verbrauchszaehler/main/admin/template.png",
+        "readme": "https://github.com/Proper0912/ioBroker.verbrauchszaehler/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "general",
+        "compact": true,
+        "materialize": true,
+        "materializeTab": true,
+        "adminTab": {
+            "singleton": true,
+            "name": {
+                "en": "Verbrauchszaehler",
+                "de": "Verbrauchszaehler",
+                "ru": "Verbrauchszaehler",
+                "pt": "Verbrauchszaehler",
+                "nl": "Verbrauchszaehler",
+                "fr": "Verbrauchszaehler",
+                "it": "Verbrauchszaehler",
+                "es": "Verbrauchszaehler",
+                "pl": "Verbrauchszaehler",
+                "zh-cn": "Verbrauchszaehler"
+            },
+            "link": "",
+            "fa-icon": "info"
+        },
+        "supportCustoms": true,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}
