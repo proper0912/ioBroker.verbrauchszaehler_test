@@ -1,6 +1,6 @@
 ![Logo](admin/verbrauchszaehler.png)
 # ioBroker.verbrauchszaehler
-
+<!--
 ![Number of Installations](http://iobroker.live/badges/verbrauchszaehler-installed.svg)
 ![Number of Installations](http://iobroker.live/badges/verbrauchszaehler-stable.svg)
 [![NPM version](http://img.shields.io/npm/v/iobroker.verbrauchszaehler.svg)](https://www.npmjs.com/package/iobroker.verbrauchszaehler)
@@ -8,7 +8,7 @@
 ![Test and Release](https://github.com/iobroker-community-adapters/ioBroker.verbrauchszaehler/workflows/Test%20and%20Release/badge.svg)
 [![Translation status](https://weblate.iobroker.net/widgets/adapters/-/homekit-controller/svg-badge.svg)](https://weblate.iobroker.net/engage/adapters/?utm_source=widget)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.verbrauchszaehler.svg)](https://www.npmjs.com/package/iobroker.verbrauchszaehler)
-
+-->
 ## Verbrauchs Zähler for ioBroker
 
 ### **WORK IN PROGRESS**
@@ -26,7 +26,7 @@
   ### **WORK IN PROGRESS**
 -->
 
-#####  0.0.1   (2022-03-09)
+##  0.0.1   (2022-03-09)
 * (Proper0912) Initial Projekt
 	
 
