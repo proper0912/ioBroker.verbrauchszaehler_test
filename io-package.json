@@ -53,34 +53,14 @@
         "license": "MIT",
         "platform": "Javascript/Node.js",
         "main": "main.js",
-        "icon": "template.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Proper0912/ioBroker.verbrauchszaehler/main/admin/template.png",
+        "icon": "verbrauchszaehler.png",
+        "enabled": false,
+        "extIcon": "https://raw.githubusercontent.com/Proper0912/ioBroker.verbrauchszaehler/main/admin/verbrauchszaehler.png",
         "readme": "https://github.com/Proper0912/ioBroker.verbrauchszaehler/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "general",
         "compact": true,
-        "materialize": true,
-        "materializeTab": true,
-        "adminTab": {
-            "singleton": true,
-            "name": {
-                "en": "Verbrauchszaehler",
-                "de": "Verbrauchszaehler",
-                "ru": "Verbrauchszaehler",
-                "pt": "Verbrauchszaehler",
-                "nl": "Verbrauchszaehler",
-                "fr": "Verbrauchszaehler",
-                "it": "Verbrauchszaehler",
-                "es": "Verbrauchszaehler",
-                "pl": "Verbrauchszaehler",
-                "zh-cn": "Verbrauchszaehler"
-            },
-            "link": "",
-            "fa-icon": "info"
-        },
-        "supportCustoms": true,
         "dependencies": [
             {
                 "js-controller": ">=2.0.0"
@@ -88,8 +68,8 @@
         ]
     },
     "native": {
-        "option1": true,
-        "option2": "42"
+        "dpoint": "",
+        "mySelect": "Öl"
     },
     "objects": [],
     "instanceObjects": []
