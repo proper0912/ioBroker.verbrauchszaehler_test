@@ -55,7 +55,7 @@ class Verbrauchszaehler extends utils.Adapter {
 		};
 		
 		if (adapter.on == true){
-		adapter.setObjectNotExists (myselect + '.' + date + '.' + 'LastDay',{
+		adapter.setObjectNotExistsAsync (myselect + '.' + date + '.' + 'LastDay',{
 			type:'state',
 			common:{
 				name:'Day' ,
@@ -66,9 +66,9 @@ class Verbrauchszaehler extends utils.Adapter {
 				def: 0,
 				unit: unit
 				},
-			native:{},
+			native:{}
 		});
-		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.LastValue',{
+		adapter.setObjectNotExistsAsync (myselect + '.' + date + '.' + '.Info.LastValue',{
 			type:'state',
 			common:{
 				name:'LastValue' ,
@@ -79,9 +79,9 @@ class Verbrauchszaehler extends utils.Adapter {
 				def: 0,
 				unit: unit
 				},
-			native:{},
+			native:{}
 		});
-		adapter.setObjectNotExists (myselect + '.' + date + '.' + '.Info.NewValue',{
+		adapter.setObjectNotExistsAsync (myselect + '.' + date + '.' + '.Info.NewValue',{
 			type:'state',
 			common:{
 				name:'NewValue' ,
@@ -92,7 +92,7 @@ class Verbrauchszaehler extends utils.Adapter {
 				def: 0,
 				unit: unit
 				},
-			native:{},
+			native:{}
 		});
 }
 /*
