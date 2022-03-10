@@ -7,61 +7,88 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
-const adaptername = "verbrauchszaehler";
-var adapter  = utils.Adapter (adaptername);
+const {default: axios} = require('axios');
+const objects = require('./lib/object_definition');
+//const adaptername = "verbrauchszaehler";
+//var adapter  = utils.Adapter(adaptername);
+const faceObjects = objects.object_connection;
 
 
 
-function startAdapter(options) {
-	options = options || {};
-	Object.assign(options, {
-		name: adapterName,
-		ready: function () {
-			try {
-				adapter.log.debug("adapter.on-ready: << READY >>");
 
-				if (true) {
-					main();
-				} else {
-					adapter.log.warn('No E-Mail or Password set');
-					adapter.stop();
-				}
-			} catch (err) {
-				adapter.log.error(err);
-				adapter.stop();
-			}
-		}
-	});
-	adapter = new utils.Adapter(options);
-
-	return adapter;
-};
-
-
-function main() {
-	adapter.log.debug("adapter.main: << MAIN >>");
-}
 
 class Verbrauchszaehler extends utils.Adapter {
 
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
-/*    constructor(options) {
+    constructor(options) {
         super({
             ...options,
-            name: 'verbrauchszaehler',
+            name: 'verbrauchszaehler'
         });
         this.on('ready', this.onReady.bind(this));
-        this.on('stateChange', this.onStateChange.bind(this));
+        //this.on('stateChange', this.onStateChange.bind(this));
         // this.on('objectChange', this.onObjectChange.bind(this));
         // this.on('message', this.onMessage.bind(this));
-        this.on('unload', this.onUnload.bind(this));
     }
-
-    /**
+	    /**
      * Is called when databases are connected and adapter received configuration.
      */
+	async onReady() {
+
+		// Reset the connection indicator during startup
+		this.setState('info.connection', false, true);
+
+		// Initialize your adapter here
+		await this.initialization();
+		this.setState('info.connection', true, true);
+		//await this.request();
+	}
+	
+	async initialization() {
+		try {
+			
+			this.log.debug(`prepare adapter for initialization`);
+			
+			const devices = this.config.devices;
+			
+			if (true) {
+				// if (stateDelete) {
+				// 	await this.localDeleteState();
+				// }
+				this.log.debug(`Adapter has been fully initialized`);
+			}
+			else {
+				deviceEnabled[1] = false
+			}
+		}
+		catch (error) {
+			this.log.error(`initialization has a problem: ${error.message}, stack: ${error.stack}`);
+		}
+	}
+	
+	async create_State(res, index) {
+		try {
+			this.log.debug(`preparation for the statesCreate...`);
+			
+			await this.setObjectNotExistsAsync(`info.connection`, {
+							type: 'channel',
+							common: {
+								name: `info connection`
+							},
+							native: {}
+						});
+
+						for (const obj in faceObjects) {
+							await this.setObjectNotExistsAsync(`info.connection.${obj}`, faceObjects[obj]);
+						}
+			this.log.debug(`subscribe to all stats in the command folder`);
+		}
+		catch (error) {
+			this.log.error(`stateCreate has a problem`);
+		}
+	}
 /*    async onReady() {
         // Initialize your adapter here
         this.log.info('config dpoint: ' + this.config.dpoint);
@@ -235,7 +262,7 @@ class Verbrauchszaehler extends utils.Adapter {
     //     }
     // }
 	
-/*}*/
+}
 
 if (module.parent) {
     // Export the constructor in compact mode
