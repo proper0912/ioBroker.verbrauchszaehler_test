@@ -20,7 +20,7 @@ function startAdapter(options) {
 			try {
 				adapter.log.debug("adapter.on-ready: << READY >>");
 
-				if (adapter.config.email && adapter.config.password) {
+				if (adapter.on) {
 					main();
 				} else {
 					adapter.log.warn('No E-Mail or Password set');
