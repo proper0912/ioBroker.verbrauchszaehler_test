@@ -68,7 +68,7 @@ class Verbrauchszaehler extends utils.Adapter {
 		}
 	}
 	
-	async create_State(res, index) {
+	async create_State() {
 		try {
 			this.log.debug(`preparation for the statesCreate...`);
 			
@@ -84,6 +84,7 @@ class Verbrauchszaehler extends utils.Adapter {
 							await this.setObjectNotExistsAsync(`info.connection.${obj}`, faceObjects[obj]);
 						}
 			this.log.debug(`subscribe to all stats in the command folder`);
+			this.log.info("info message"); 
 		}
 		catch (error) {
 			this.log.error(`stateCreate has a problem`);

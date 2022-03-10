@@ -66,7 +66,7 @@
         "js-controller": ">=2.0.0"
       }
     ],
-    "installedFrom": "Proper0912/ioBroker.verbrauchszaehler#8b3f5ec40df0c6afa4c32d715d7b940116093314"
+    "installedFrom": "Proper0912/ioBroker.verbrauchszaehler#7e7adb86e0625f6143f070223699fab803661542"
   },
   "native": {
     "dpoint": "",
