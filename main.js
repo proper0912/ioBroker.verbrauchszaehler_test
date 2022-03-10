@@ -8,17 +8,45 @@
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
 const adaptername = "verbrauchszaehler";
-var adapter  = utils.Adapter (adaptername);
+//var adapter  = utils.Adapter (adaptername);
 
-// Load your modules here, e.g.:
-// const fs = require("fs");
 
+let adapter;
+function startAdapter(options) {
+	options = options || {};
+	Object.assign(options, {
+		name: adapterName,
+		ready: function () {
+			try {
+				adapter.log.debug("adapter.on-ready: << READY >>");
+
+				if (adapter.config.email && adapter.config.password) {
+					main();
+				} else {
+					adapter.log.warn('No E-Mail or Password set');
+					adapter.stop();
+				}
+			} catch (err) {
+				adapter.log.error(err);
+				adapter.stop();
+			}
+		}
+	});
+	adapter = new utils.Adapter(options);
+
+	return adapter;
+};
+
+function main() {
+	adapter.log.debug("adapter.main: << MAIN >>");
+}
+/*
 class Verbrauchszaehler extends utils.Adapter {
 
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
-    constructor(options) {
+/*    constructor(options) {
         super({
             ...options,
             name: 'verbrauchszaehler',
@@ -33,7 +61,7 @@ class Verbrauchszaehler extends utils.Adapter {
     /**
      * Is called when databases are connected and adapter received configuration.
      */
-    async onReady() {
+/*    async onReady() {
         // Initialize your adapter here
         this.log.info('config dpoint: ' + this.config.dpoint);
         this.log.info('config mySelect: ' + this.config.mySelect);
@@ -138,7 +166,7 @@ class Verbrauchszaehler extends utils.Adapter {
 
         result = await this.checkGroupAsync('admin', 'admin');
        this.log.info('check group user admin group admin: ' + result);
- */ catch (err) {
+ */ /*catch (err) {
 		adapter.log.error(err);
 	}
 	}
@@ -147,7 +175,7 @@ class Verbrauchszaehler extends utils.Adapter {
      * Is called when adapter shuts down - callback has to be called under any circumstances!
      * @param {() => void} callback
      */
-    onUnload(callback) {
+ /*   onUnload(callback) {
         try {
 			this.log.info("cleaned everything up...");
             callback();
@@ -206,7 +234,7 @@ class Verbrauchszaehler extends utils.Adapter {
     //     }
     // }
 	
-}
+/*}*/
 
 if (module.parent) {
     // Export the constructor in compact mode
