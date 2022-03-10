@@ -95,6 +95,8 @@ class Verbrauchszaehler extends utils.Adapter {
 			native:{}
 		});
 		}
+		
+		adapter.subscribeStates('*');
 /*
         await this.setObjectNotExistsAsync('testVariable', {
             type: 'state',
@@ -203,7 +205,7 @@ class Verbrauchszaehler extends utils.Adapter {
     //         }
     //     }
     // }
-
+	
 }
 
 if (module.parent) {
