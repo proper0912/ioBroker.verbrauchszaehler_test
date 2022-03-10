@@ -11,8 +11,7 @@ const adaptername = "verbrauchszaehler";
 var adapter  = utils.Adapter (adaptername);
 
 
-/*
-let adapter;
+
 function startAdapter(options) {
 	options = options || {};
 	Object.assign(options, {
@@ -21,7 +20,7 @@ function startAdapter(options) {
 			try {
 				adapter.log.debug("adapter.on-ready: << READY >>");
 
-				if (adapter.on) {
+				if (true) {
 					main();
 				} else {
 					adapter.log.warn('No E-Mail or Password set');
@@ -38,7 +37,7 @@ function startAdapter(options) {
 	return adapter;
 };
 
-/*
+
 function main() {
 	adapter.log.debug("adapter.main: << MAIN >>");
 }
