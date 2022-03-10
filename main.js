@@ -136,7 +136,9 @@ class Verbrauchszaehler extends utils.Adapter {
 
         result = await this.checkGroupAsync('admin', 'admin');
        this.log.info('check group user admin group admin: ' + result);
- */ 
+ */ catch (err) {
+		adapter.log.error(err);
+	}
 	}
 
     /**
@@ -174,7 +176,7 @@ class Verbrauchszaehler extends utils.Adapter {
      * @param {string} id
      * @param {ioBroker.State | null | undefined} state
      */
-    onStateChange(id, state) {
+ /*   onStateChange(id, state) {
         if (state) {
             // The state was changed
             this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
@@ -182,7 +184,7 @@ class Verbrauchszaehler extends utils.Adapter {
             // The state was deleted
             this.log.info(`state ${id} deleted`);
         }
-    }
+    }*/
 
     // If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
     // /**
