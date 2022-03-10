@@ -10,7 +10,7 @@ const utils = require('@iobroker/adapter-core');
 const {default: axios} = require('axios');
 const objects = require('./lib/object_definition');
 //const adaptername = "verbrauchszaehler";
-//var adapter  = utils.Adapter(adaptername);
+var adapter  = utils.Adapter('verbrauchszaehler');
 const faceObjects = objects.object_connection;
 
 
@@ -28,7 +28,8 @@ class Verbrauchszaehler extends utils.Adapter {
             name: 'verbrauchszaehler'
         });
         this.on('ready', this.onReady.bind(this));
-        //this.on('stateChange', this.onStateChange.bind(this));
+        this.on('stateChange', this.onStateChange.bind(this));
+		this.on('unload', this.onUnload.bind(this));
         // this.on('objectChange', this.onObjectChange.bind(this));
         // this.on('message', this.onMessage.bind(this));
     }
@@ -38,11 +39,11 @@ class Verbrauchszaehler extends utils.Adapter {
 	async onReady() {
 
 		// Reset the connection indicator during startup
-		this.setState('info.connection', false, true);
+		adapter.setState('info.connection', false, true);
 
 		// Initialize your adapter here
 		await this.initialization();
-		this.setState('info.connection', true, true);
+		adapter.setState('info.connection', true, true);
 		//await this.request();
 	}
 	
@@ -204,7 +205,7 @@ class Verbrauchszaehler extends utils.Adapter {
      * Is called when adapter shuts down - callback has to be called under any circumstances!
      * @param {() => void} callback
      */
- /*   onUnload(callback) {
+    onUnload(callback) {
         try {
 			this.log.info("cleaned everything up...");
             callback();
@@ -235,7 +236,7 @@ class Verbrauchszaehler extends utils.Adapter {
      * @param {string} id
      * @param {ioBroker.State | null | undefined} state
      */
- /*   onStateChange(id, state) {
+    onStateChange(id, state) {
         if (state) {
             // The state was changed
             this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
@@ -243,7 +244,7 @@ class Verbrauchszaehler extends utils.Adapter {
             // The state was deleted
             this.log.info(`state ${id} deleted`);
         }
-    }*/
+    }
 
     // If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
     // /**
