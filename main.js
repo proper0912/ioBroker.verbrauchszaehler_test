@@ -8,7 +8,7 @@
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
 const adaptername = "verbrauchszaehler";
-//var adapter  = utils.Adapter (adaptername);
+var adapter  = utils.Adapter (adaptername);
 
 
 /*
