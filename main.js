@@ -11,6 +11,7 @@ const adaptername = "verbrauchszaehler";
 //var adapter  = utils.Adapter (adaptername);
 
 
+/*
 let adapter;
 function startAdapter(options) {
 	options = options || {};
@@ -37,6 +38,7 @@ function startAdapter(options) {
 	return adapter;
 };
 
+/*
 function main() {
 	adapter.log.debug("adapter.main: << MAIN >>");
 }
