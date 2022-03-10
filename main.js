@@ -40,10 +40,10 @@ class Verbrauchszaehler extends utils.Adapter {
 		
 		var date =  new Date().getFullYear();
 		var myselect = this.config.mySelect;
-		//var day = boolean;
-		//var week = boolean;
-		//var month = boolean;
-		//var year = boolean;
+		//var day = bool;
+		//var week = bool;
+		//var month = bool;
+		//var year = bool;
 		var unit;
 		
 		if ( myselect == "Öl" || myselect == "Wasser") {
@@ -54,7 +54,7 @@ class Verbrauchszaehler extends utils.Adapter {
 			unit ="";
 		};
 		
-		if (adapter.on == true){
+		if (adapter.on() == true){
 		adapter.setObjectNotExistsAsync (myselect + '.' + date + '.' + 'LastDay',{
 			type:'state',
 			common:{
@@ -94,7 +94,7 @@ class Verbrauchszaehler extends utils.Adapter {
 				},
 			native:{}
 		});
-}
+		}
 /*
         await this.setObjectNotExistsAsync('testVariable', {
             type: 'state',
