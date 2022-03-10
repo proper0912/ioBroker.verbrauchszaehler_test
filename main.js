@@ -41,7 +41,7 @@ function startAdapter(options) {
 function main() {
 	adapter.log.debug("adapter.main: << MAIN >>");
 }
-/*
+
 class Verbrauchszaehler extends utils.Adapter {
 
     /**
